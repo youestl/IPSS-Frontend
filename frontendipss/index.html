@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FrontendIPSS - Consultoría y Desarrollo de Software</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+</html>
+
+
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm" data-bs-theme="dark">
+    <div class="container">
+      
+      <!-- Marca y Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <img src="img/logo.png" alt="Logo FrontendIPSS" width="30" height="30">  
+        <span>FrontendIPSS</span>
+      </a>
+
+      <!-- Botón Hamburguesa para Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú de Navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-2 mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Nuestros Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contáctenos</a></li>
+        </ul>
+      </div>
+      
+      <!-- Botón Modo Oscuro / Claro -->
+      <button id="toggleColor" class="btn btn-sm btn-outline-light ms-2" type="button">
+        <i class="bi bi-moon-fill me-1" id="toggleIcon"></i>
+        <span class="d-lg-none">Cambiar Modo</span>
+      </button>
+
+    </div>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+  <main>
+
+
+    <!-- Seccion HOME -->
+    <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center">
+      <div class="container text-white">
+
+
+      
+        <h1 class="display-3 fw-bold">Innovación en cada conexión</h1>
+        <p class="txthome">En <strong>Innova y Crea</strong> transformamos ideas complejas en soluciones digitales ágiles y escalables. Somos una firma de consultoría y desarrollo dedicada a impulsar la transformación digital de tu negocio, creando productos tecnológicos que optimizan procesos y conectan con tus usuarios.</p>
+      
+      </div>
+    </section>
+
+ <section id="servicios" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row" id="servicios-container"></div>
+        
+    </div>
+</section>
+   
+<section id="nosotros" class="py-5">
+    <div class="container">
+
+        <div id="nosotros-container"></div>
+    </div>
+</section>
+
+
+
+    <!-- Formulario -->
+    <section id="contacto" class="bg-body-tertiary py-5">
+      <div class="container py-5">
+          <!--Titulo-->
+          <div class="text-center mb-5">
+            <h2 class="text-dark-lead"> Agenda una consultoría gratuita</h2>
+            <P class="text-muted lead">Contactate con nosotros con gusto te responderemos.</P>
+          </div>
+      <!--Form-->
+        <div class="row align-items-center g-5">
+
+            <div class="col-md-6 text-center">
+              <img src="img/LogoForm.png" alt="Logoform" style="max-height: 100px;">      
+            
+              <p class="text-muted lead"> Completa el formulario y uno de nuestros expertos se pondrá en contacto contigo en menos de 24 horas.</p>
+            </div>
+      <!--Formulario parte derecha-->
+            <div class="col-md-5">
+                <form id="contactForm">
+                  
+                    <div class="mb-3">
+                      <label for="Nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control form-control-sm" id="nombre" placeholder="Nombres" required >
+                      <div class="mensaje-error" id="nombreError"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Apellidos" class="form-label">Apellido</label>
+                      <input type="text" class="form-control form-control-sm" id="apellido" placeholder="Apellidos" required>
+                      <div class="mensaje-error" id="apellidoError"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Email" class="form-label">Correo</label>
+                      <input type="email" class="form-control form-control-sm" id="email" placeholder="nombre@ejemplo.com" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Mensaje" class="form-label">Comentario</label>
+                      <textarea class="form-control form-control-sm" id="mensaje" rows="3" required></textarea>
+                    </div>
+
+                    <div class="mb-3 text-center">
+                      <button type="submit" class="btn btn-moderno px-4 py-2">
+                        ENVIAR
+                      </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class=" text-body-secondary pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- Columna 1: Marca y descripción -->
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold text-uppercase mb-3">
+            <img src="img/logo.png" alt="Logo" width="30" height="30" class="me-2">
+            FrontendIPSS
+          </h5>
+          <p class="text-muted small">
+            Transformamos ideas complejas en soluciones digitales ágiles y escalables. Tu aliado estratégico en desarrollo de software.
+          </p>
+        
+          <div class="d-flex gap-3 fs-5">
+            <a href="https://cl.linkedin.com"   class="text-body-secondary"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/" class="text-body-secondary"><i class="bi bi-github"></i></a>
+            <a href="https://x.com/" class=" text-body-secondary"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://facebook.com/"class="text-body-secondary" ><i class="bi bi-facebook"></i></a>
+
+
+          </div>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div class="col-6 col-md-4">
+          <h5 class="fw-bold mb-3">Navegación</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home" class="text-body-secondary text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="#servicios" class="text-body-secondary text-decoration-none">Nuestros Servicios</a></li>
+            <li class="mb-2"><a href="#nosotros" class="text-body-secondary text-decoration-none">Nosotros</a></li>
+            <li class="mb-2"><a href="#contacto" class="text-body-secondary text-decoration-none">Contáctenos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Información de Contacto -->
+        <div class="col-6 col-md-4">
+          <h5 class="fw-bold mb-3">Dirección Fisica</h5>
+          <ul class="list-unstyled text-body-secondary small">
+            <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Av. Providencia 1234, Oficina 601</li>
+            <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Providencia, Santiago Chile
+            <li class="mb-2"><i class="bi bi-envelope me-2"></i>info@frontendipss.cl</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2"></i>+56 2 1234 5678</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('toggleColor');
+    const toggleIcon = document.getElementById('toggleIcon');
+    const htmlTag = document.documentElement;
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const currentTheme = htmlTag.getAttribute('data-bs-theme') || 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        htmlTag.setAttribute('data-bs-theme', newTheme);
+        if (toggleIcon) {
+          if (newTheme === 'dark') {
+            toggleIcon.className = 'bi bi-sun-fill me-1';
+          } else {
+            toggleIcon.className = 'bi bi-moon-fill me-1';
+          }
+        }
+      });
+    }
+  });
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
