@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================= */
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* =========================================
+   2. NAVBAR Y BARRA SUPERIOR (MODO CLARO)
+   ========================================= */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    align-items: center;
+}
+.navbar, header {
+    overflow: visible !important;
+}
+.dropdown-menu {
+    z-index: 1050 !important; 
+}
+
+.navbar .nav-link {
+    position: relative; 
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+/* Color activo y hover */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #1808a5 !important;
+}
+
+/* Animación de la línea debajo de los enlaces */
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%; 
+    height: 3px;
+    background-color: #250dfd;
+    transition: width 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+/* Dropdown automático en computadoras */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+/* Colores del dropdown en Modo Claro (¡Corregido!) */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item.active {
+    color: #1808a5 !important;
+    background-color: #0dfd71 !important;
+}
+
+[data-bs-theme="light"] #barra-indicadores {
+    background-color: #bcd0ee !important;
+    border-bottom: 2px solid #1808a5 !important;
+        backdrop-filter: blur(12px) !important; 
+    -webkit-backdrop-filter: blur(12px) !important;  
+}
+
+
+/* =========================================
+   3. MODO OSCURO (DARK THEME OVERRIDES)
+   ========================================= */
+[data-bs-theme="dark"] .navbar {
+     background-color: rgba(26, 26, 32, 0.85) !important;
+        backdrop-filter: blur(12px) !important; 
+    -webkit-backdrop-filter: blur(12px) !important; 
+}
+[data-bs-theme="light"] .navbar {
+    background-color: rgba(255, 255, 255, 0.85) !important; 
+    backdrop-filter: blur(12px) !important; 
+    -webkit-backdrop-filter: blur(12px) !important; 
+}
+
+[data-bs-theme="dark"] .navbar .nav-link {
+    color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .navbar .nav-link:hover {
+    color: #61bee6 !important;
+}
+
+[data-bs-theme="dark"] .navbar .nav-link.active {
+    color: #069dd8 !important; 
+}
+
+[data-bs-theme="dark"] #barra-indicadores {
+    background-color: #1a1a20 !important; 
+    border-bottom: 2px solid #a40000 !important;
+}
+
+[data-bs-theme="dark"] .dropdown-menu .dropdown-item:hover,
+[data-bs-theme="dark"] .dropdown-menu .dropdown-item.active {
+    color: #ffffff !important; 
+    background-color: #1808a5 !important; 
+}
+
+
+/* =========================================
+   4. SECCIÓN HERO (CARRUSEL PRINCIPAL)
+   ========================================= */
+#herosection {
+    
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #333;
+    padding-top: 100px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero-contenido {
+    position: absolute;
+    z-index: 2;
+    bottom: 0%;
+    color: #ffffff; 
+    text-align: start;
+    max-width: 600px;
+    padding: 0 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-texto {
+    font-size: 1.0rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-btn {
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0.5%;
+    box-sizing: border-box;
+}
+
+.herobtn-prev, 
+.herobtn-next {
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.036);
+    color: #e0e3e6d5;
+    border: 2px solid #030202;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    backdrop-filter: blur(5px); 
+    transition: all 0.3s;
+}
+
+.herobtn-prev:hover, 
+.herobtn-next:hover {
+    background-color: #056e8e8d;
+    color: #000000;
+    transition: 0.5s;
+}
+
+
+/* =========================================
+   5. SECCIÓN NOTICIAS, CONTACTO, TESTIMONIOS
+   ========================================= */
+.noticias, .testimonios {
+    margin-top: 0px;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor-noticias, #contenedor-testimonios {
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contenedor-noticias img {
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 12px; 
+}
+
+
+.testimonios .carousel {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #1444706c;
+    border-radius: 12px;
+}
+
+
+#carruselNoticias, #carruselTestimonios {
+    margin-top: 40px;
+}
+
+
+#contenedor-testimonios img {
+    filter: brightness(0.6);
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Colores Dinámicos (Claro) */
+[data-bs-theme="light"] .noticias,
+[data-bs-theme="light"] .contacto,
+[data-bs-theme="light"] .nosotros, 
+[data-bs-theme="light"] .testimonios {
+    background-color: #b2d3f3 !important;
+    border-top: 1px solid #e9ecef !important;
+    border-bottom: 2px solid #a40000 !important;
+}
+
+/* Colores Dinámicos (Oscuro) */
+[data-bs-theme="dark"] .noticias,
+[data-bs-theme="dark"] .contacto,
+[data-bs-theme="dark"] .nosotros,
+[data-bs-theme="dark"] .testimonios {
+    background-color: #1a1a20 !important; 
+    border-top: 1px solid #2b2b36 !important; 
+    border-bottom: 2px solid #a40000 !important;
+}
+
+#btn-actualizar {
+    width: 100px;
+    max-height: 100px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+.footer {
+    border-top: 1px solid #dee2e6; /* Cambié tu variable por un gris compatible */
+}
+
+[data-bs-theme="light"] footer {
+    background-color: #1aa5e6d3;
+}
+
+[data-bs-theme="dark"] footer {
+    background-color: #144470;
+}
