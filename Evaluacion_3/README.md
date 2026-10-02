@@ -1,6 +1,6 @@
 # Portal Web Sercotec - Mockup Dinámico
 
-Desarrollo frontend de una landing page interactiva y responsiva, construida como parte de mi portafolio de Ingeniería en Computación en el Instituto Profesional San Sebastián. 
+Desarrollo frontend de una landing page interactiva y responsiva, construida como parte de mi portafolio de Ingeniería Informática en el Instituto Profesional San Sebastián. 
 
 ## Características Principales
 * **Consumo de API:** Integración asíncrona (`fetch`) con Gael Cloud para mostrar indicadores económicos (UF, Dólar, Euro, UTM) en tiempo real, validando la data de origen.
